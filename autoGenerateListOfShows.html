@@ -1,0 +1,383 @@
+<script>
+const shows = [
+ {
+   "series_name": "2018 BWAY First Date",
+   "start_date": "Nov 11, 2017",
+   "show_run": "Nov 11, 2017 - Apr 22, 2018",
+   "venue_name": "Garner Galleria Theatre",
+   "series_group": "BOBS18",
+   "code": "2018 DATE"
+ },
+ {
+   "series_name": "2018 BWAY Hamilton",
+   "start_date": "Feb 27, 2018",
+   "show_run": "Feb 27, 2018 - Apr 01, 2018",
+   "venue_name": "Buell Theatre",
+   "series_group": "BOBS18",
+   "code": "2018 HAMI"
+ },
+ {
+   "series_name": "2018 BWAY Lady Day",
+   "start_date": "Mar 5, 2018",
+   "show_run": "Mar 05, 2018 - Apr 23, 2018",
+   "venue_name": "Garner Galleria Theatre-lady",
+   "series_group": "BOBS18",
+   "code": "2018 LADY"
+ },
+ {
+   "series_name": "2018 Off Center This is Modern Art",
+   "start_date": "Mar 22, 2018",
+   "show_run": "Mar 22, 2018 - Apr 15, 2018",
+   "venue_name": "General Admission",
+   "series_group": "Off Center 2018",
+   "code": "2018 ART"
+ },
+ {
+   "series_name": "2018 BWAY Disney's Aladdin",
+   "start_date": "Apr 6, 2018",
+   "show_run": "Apr 06, 2018 - Apr 28, 2018",
+   "venue_name": "Buell Theatre",
+   "series_group": "BOBS18",
+   "code": "2018 ALAD"
+ },
+ {
+   "series_name": "2018 TC Native Gardens",
+   "start_date": "Apr 6, 2018",
+   "show_run": "Apr 06, 2018 - May 06, 2018",
+   "venue_name": "Space Theatre",
+   "series_group": "TC18",
+   "code": "2018 NATI"
+ },
+ {
+   "series_name": "2018 TC The Who's Tommy",
+   "start_date": "Apr 20, 2018",
+   "show_run": "Apr 20, 2018 - May 27, 2018",
+   "venue_name": "Stage Theatre",
+   "series_group": "TC18",
+   "code": "2018 TOMM"
+ },
+ {
+   "series_name": "2018 BWAY For the Love of George",
+   "start_date": "May 3, 2018",
+   "show_run": "May 03, 2018 - May 11, 2018",
+   "venue_name": "Conservatory Theatre",
+   "series_group": "BOBS18",
+   "code": "2018 LOVE"
+ },
+ {
+   "series_name": "2018 Off Center - Test Audience Remote Denver",
+   "start_date": "May 18, 2018",
+   "show_run": "May 18, 2018 - May 20, 2018",
+   "venue_name": "General Admission",
+   "series_group": "Off Center 2018",
+   "code": "2018 REMO05"
+ },
+ {
+   "series_name": "2018 TC Human Error",
+   "start_date": "May 18, 2018",
+   "show_run": "May 18, 2018 - Jun 24, 2018",
+   "venue_name": "Garner Galleria Theatre",
+   "series_group": "TC18",
+   "code": "2018 HUMA"
+ },
+ {
+   "series_name": "2018 Off Center - Test Audience Remote Denver",
+   "start_date": "May 20, 2018",
+   "show_run": "May 20, 2018 - May 20, 2018",
+   "venue_name": "General Admission",
+   "series_group": "Off Center 2018",
+   "code": "2018 REMO"
+ },
+ {
+   "series_name": "2018 Off Center - Remote Denver",
+   "start_date": "May 22, 2018",
+   "show_run": "May 22, 2018 - Jul 01, 2018",
+   "venue_name": "General Admission",
+   "series_group": "Off Center 2018",
+   "code": "2018 REMO"
+ },
+ {
+   "series_name": "2018 BWAY School of Rock",
+   "start_date": "May 29, 2018",
+   "show_run": "May 29, 2018 - Jun 10, 2018",
+   "venue_name": "Buell Theatre",
+   "series_group": "BOBS18",
+   "code": "2018 ROCK"
+ },
+ {
+   "series_name": "2018 BWAY The Book of Mormon",
+   "start_date": "Jun 13, 2018",
+   "show_run": "Jun 13, 2018 - Jul 01, 2018",
+   "venue_name": "Ellie Caulkins Opera House",
+   "series_group": "BOBS18",
+   "code": "2018 BOM"
+ },
+ {
+   "series_name": "2019 Behind the ScenesTours",
+   "start_date": "Jul 2, 2018",
+   "show_run": "Jul 02, 2018 - Jul 30, 2018",
+   "venue_name": "General Admission",
+   "series_group": "2019",
+   "code": "19TOU"
+ },
+ {
+   "series_name": "2019 BWAY Sex Tips...",
+   "start_date": "Jul 12, 2018",
+   "show_run": "Jul 12, 2018 - Aug 05, 2018",
+   "venue_name": "Garner Galleria Theatre.",
+   "series_group": "BOBS19",
+   "code": "2019 TIPS"
+ },
+ {
+   "series_name": "2019 Behind the ScenesTours",
+   "start_date": "Jul 20, 2018",
+   "show_run": "Jul 20, 2018 - Sep 29, 2018",
+   "venue_name": "General Admission",
+   "series_group": "2019",
+   "code": "19TOUR"
+ },
+ {
+   "series_name": "2018 BWAY Les Misérables",
+   "start_date": "Jul 25, 2018",
+   "show_run": "Jul 25, 2018 - Aug 05, 2018",
+   "venue_name": "Buell Theatre",
+   "series_group": "BOBS18",
+   "code": "2018 LESM"
+ },
+ {
+   "series_name": "2018 BWAY On Your Feet!",
+   "start_date": "Aug 8, 2018",
+   "show_run": "Aug 08, 2018 - Aug 19, 2018",
+   "venue_name": "Buell Theatre",
+   "series_group": "BOBS18",
+   "code": "2018 FEET"
+ },
+ {
+   "series_name": "2019 TC Vietgone",
+   "start_date": "Aug 24, 2018",
+   "show_run": "Aug 24, 2018 - Sep 30, 2018",
+   "venue_name": "Ricketson Theatre",
+   "series_group": "TC19",
+   "code": "2019 VIET"
+ },
+ {
+   "series_name": "2018 BWAY BEAUTIFUL - The Carole King Musical",
+   "start_date": "Sep 4, 2018",
+   "show_run": "Sep 04, 2018 - Sep 09, 2018",
+   "venue_name": "Ellie Caulkins Opera House",
+   "series_group": "BOBS18",
+   "code": "2018 BEAU"
+ },
+ {
+   "series_name": "2019 BWAY Improvised Shakespeare Company",
+   "start_date": "Sep 13, 2018",
+   "show_run": "Sep 13, 2018 - Sep 30, 2018",
+   "venue_name": "Garner Galleria Theatre *",
+   "series_group": "BOBS19",
+   "code": "2019 SHAK"
+ },
+ {
+   "series_name": "2019 BWAY Dear Evan Hansen",
+   "start_date": "Sep 25, 2018",
+   "show_run": "Sep 25, 2018 - Oct 13, 2018",
+   "venue_name": "Buell Theatre",
+   "series_group": "BOBS19",
+   "code": "2019 EVAN"
+ },
+ {
+   "series_name": "2019 TYA - Corduroy",
+   "start_date": "Oct 5, 2018",
+   "show_run": "Oct 05, 2018 - Dec 09, 2018",
+   "venue_name": "Conservatory Theatre",
+   "series_group": "2019",
+   "code": "2019 CORD"
+ },
+ {
+   "series_name": "2019 BWAY Love Never Dies",
+   "start_date": "Oct 23, 2018",
+   "show_run": "Oct 23, 2018 - Oct 28, 2018",
+   "venue_name": "Buell Theatre",
+   "series_group": "BOBS19",
+   "code": "2019 LOVE"
+ },
+ {
+   "series_name": "2019 BWAY Breakin' Convention",
+   "start_date": "Nov 3, 2018",
+   "show_run": "Nov 03, 2018 - Nov 04, 2018",
+   "venue_name": "Buell Theatre",
+   "series_group": "BOBS19",
+   "code": "2019 BREA"
+ },
+ {
+   "series_name": "2019 BWAY Xanadu",
+   "start_date": "Nov 3, 2018",
+   "show_run": "Nov 03, 2018 - Apr 28, 2019",
+   "venue_name": "Garner Galleria Theatre,",
+   "series_group": "BOBS19",
+   "code": "2019 XANA"
+ },
+ {
+   "series_name": "2019 BWAY Come From Away",
+   "start_date": "Nov 13, 2018",
+   "show_run": "Nov 13, 2018 - Nov 25, 2018",
+   "venue_name": "Buell Theatre",
+   "series_group": "BOBS19",
+   "code": "2019 AWAY"
+ },
+ {
+   "series_name": "2019 TC A Christmas Carol",
+   "start_date": "Nov 21, 2018",
+   "show_run": "Nov 21, 2018 - Dec 24, 2018",
+   "venue_name": "Stage Theatre",
+   "series_group": "TC19",
+   "code": "2019 XMAS"
+ },
+ {
+   "series_name": "2019 BWAY White Christmas",
+   "start_date": "Dec 5, 2018",
+   "show_run": "Dec 05, 2018 - Dec 15, 2018",
+   "venue_name": "Buell Theatre",
+   "series_group": "BOBS19",
+   "code": "2019 Whit"
+ },
+ {
+   "series_name": "2019 BWAY Cirque Eloize - Hotel",
+   "start_date": "Dec 19, 2018",
+   "show_run": "Dec 19, 2018 - Dec 23, 2018",
+   "venue_name": "Buell Theatre",
+   "series_group": "BOBS19",
+   "code": "2019 CIRQ"
+ },
+ {
+   "series_name": "2019 BWAY A Bronx Tale...",
+   "start_date": "Jan 8, 2019",
+   "show_run": "Jan 08, 2019 - Jan 20, 2019",
+   "venue_name": "Buell Theatre",
+   "series_group": "BOBS19",
+   "code": "2019 BRON"
+ },
+ {
+   "series_name": "2019 BWAY Rock of Ages",
+   "start_date": "Jan 25, 2019",
+   "show_run": "Jan 25, 2019 - Jan 27, 2019",
+   "venue_name": "Buell Theatre",
+   "series_group": "BOBS19",
+   "code": "2019 ROCK"
+ },
+ {
+   "series_name": "2019 BWAY Bat out of Hell",
+   "start_date": "Feb 6, 2019",
+   "show_run": "Feb 06, 2019 - Feb 17, 2019",
+   "venue_name": "Buell Theatre",
+   "series_group": "BOBS19",
+   "code": "2019 BAT"
+ },
+ {
+   "series_name": "2019 BWAY The Play That Goes Wrong",
+   "start_date": "Mar 5, 2019",
+   "show_run": "Mar 05, 2019 - Mar 17, 2019",
+   "venue_name": "Buell Theatre",
+   "series_group": "BOBS19",
+   "code": "2019 PLAY"
+ },
+ {
+   "series_name": "2019 BWAY Hello Dolly!",
+   "start_date": "Mar 27, 2019",
+   "show_run": "Mar 27, 2019 - Apr 07, 2019",
+   "venue_name": "Buell Theatre",
+   "series_group": "BOBS19",
+   "code": "2019 DOLL"
+ },
+ {
+   "series_name": "2019 BWAY CATS",
+   "start_date": "Apr 24, 2019",
+   "show_run": "Apr 24, 2019 - Apr 28, 2019",
+   "venue_name": "Buell Theatre",
+   "series_group": "BOBS19",
+   "code": "2019 CATS"
+ },
+ {
+   "series_name": "2019 BWAY Wicked",
+   "start_date": "May 8, 2019",
+   "show_run": "May 08, 2019 - Jun 09, 2019",
+   "venue_name": "Buell Theatre",
+   "series_group": "BOBS19",
+   "code": "2019 WICK"
+ },
+ {
+   "series_name": "2019 BWAY Fiddler on the Roof",
+   "start_date": "Jun 11, 2019",
+   "show_run": "Jun 11, 2019 - Jun 16, 2019",
+   "venue_name": "Buell Theatre",
+   "series_group": "BOBS19",
+   "code": "2019 FIDD"
+ },
+ {
+   "series_name": "2019 BWAY Charlie and the Chocolate Factory",
+   "start_date": "Jul 9, 2019",
+   "show_run": "Jul 09, 2019 - Jul 28, 2019",
+   "venue_name": "Buell Theatre",
+   "series_group": "BOBS19",
+   "code": "2019 CHAR"
+ },
+ {
+   "series_name": "2019 BWAY Anastasia",
+   "start_date": "Aug 7, 2019",
+   "show_run": "Aug 07, 2019 - Aug 18, 2019",
+   "venue_name": "Buell Theatre",
+   "series_group": "BOBS19",
+   "code": "2019 ANAS"
+ }
+];
+</script>
+
+
+<script type="text/javascript">
+ 
+// Array.prototype.map()
+// 2. Give us an array of the inventor first and last names
+
+const seriesNames = shows.map(show => `${show.series_name}`);
+const startDates = shows.map(show => `${show.start_date}`);
+const runDates = shows.map(show => `${show.show_run}`);
+
+console.log(runDates);
+
+const venue = shows.map(show => `${show.venue_name}`);
+
+console.log(venue);
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
